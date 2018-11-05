@@ -14,7 +14,7 @@ import com.lq.pay.wx.WxPay;
  * @time:2018/11/5
  */
 public class PayHelper {
-    static PayHelper sPayHelper;
+    private static PayHelper sPayHelper;
 
     private PayHelper() {
     }
