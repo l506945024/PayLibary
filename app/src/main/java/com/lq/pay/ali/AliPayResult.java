@@ -4,12 +4,12 @@ import java.util.Map;
 
 import android.text.TextUtils;
 
-public class PayResult {
+public class AliPayResult {
 	private String resultStatus;
 	private String result;
 	private String memo;
 
-	public PayResult(Map<String, String> rawResult) {
+	public AliPayResult(Map<String, String> rawResult) {
 		if (rawResult == null) {
 			return;
 		}
