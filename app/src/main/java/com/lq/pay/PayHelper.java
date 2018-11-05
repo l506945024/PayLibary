@@ -36,16 +36,16 @@ public class PayHelper {
      * @param context
      * @param appId
      */
-    public static void initWx(Context context, String appId) {
+    public static void initWxPay(Context context, String appId) {
         WxPay.init(context, appId);
     }
 
     /**
      * 调起支付宝支付
      *
-     * @param orderInfo
+     * @param orderInfo 服务器拼接好的支付宝支付字符串
      * @param activity
-     * @param payResult
+     * @param payResult 支付结果回调
      */
     public void startAliPay(String orderInfo, Activity activity, IPayResultCallBack payResult) {
         AliPay.getInstance().pay(orderInfo, activity, payResult);
@@ -54,9 +54,9 @@ public class PayHelper {
     /**
      * 调起微信支付
      *
-     * @param param
+     * @param param 支付参数
      * @param context
-     * @param payResult
+     * @param payResult 支付结果回调
      */
     public void startWxPay(WxParam param, Context context, IPayResultCallBack payResult) {
         WxPay.getInstance().pay(param, context, payResult);

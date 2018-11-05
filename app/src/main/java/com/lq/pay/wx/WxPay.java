@@ -80,7 +80,7 @@ public class WxPay {
      */
     private boolean checkWeChatPay() {
         if (msgApi == null) {
-            throw new NullPointerException("使用微信支付必须先在onCreate中调用PayHelper.initWx(context, appId)完成初始化!");
+            throw new NullPointerException("使用微信支付必须先在onCreate中调用PayHelper.initWxPay(context, appId)完成初始化!");
         }
         int wxSdkVersion = msgApi.getWXAppSupportAPI();
         boolean isWeChatAble = true;
